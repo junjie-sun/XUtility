@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>XUtility.Client</name>
+    </assembly>
+    <members>
+        <member name="T:XUtility.Client.ClientBase">
+            <summary>
+            Client基类
+            </summary>
+        </member>
+        <member name="M:XUtility.Client.ClientBase.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="baseApiUrl"></param>
+        </member>
+        <member name="P:XUtility.Client.ClientBase.Logger">
+            <summary>
+            日志对像
+            </summary>
+        </member>
+        <member name="P:XUtility.Client.ClientBase.Name">
+            <summary>
+            Client名称
+            </summary>
+        </member>
+        <member name="M:XUtility.Client.ClientBase.AppendApiAuthParam(System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.String)">
+            <summary>
+            添加API验证参数
+            </summary>
+            <param name="apiName"></param>
+            <param name="data"></param>
+            <param name="ip"></param>
+        </member>
+        <member name="M:XUtility.Client.ClientBase.DoRequest``1(System.String,System.Object,System.String,System.String,System.Boolean,XUtility.Http.HttpGetOptions,XUtility.Http.HttpPostOptions,System.Action{System.Net.Http.HttpClient})">
+            <summary>
+            执行请求
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="apiName"></param>
+            <param name="req"></param>
+            <param name="method"></param>
+            <param name="ip"></param>
+            <param name="isFromAttr"></param>
+            <param name="httpGetOptions"></param>
+            <param name="httpPostOptions"></param>
+            <param name="clientSetting"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XUtility.Client.ClientBase.DoRequest(System.String,System.Object,System.String,System.String,System.Boolean,XUtility.Http.HttpGetOptions,XUtility.Http.HttpPostOptions,System.Action{System.Net.Http.HttpClient})">
+            <summary>
+            执行请求
+            </summary>
+            <param name="apiName"></param>
+            <param name="req"></param>
+            <param name="method"></param>
+            <param name="ip"></param>
+            <param name="isFromAttr"></param>
+            <param name="httpGetOptions"></param>
+            <param name="httpPostOptions"></param>
+            <param name="clientSetting"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XUtility.Client.ClientBase.FillData(System.Object,System.Collections.Generic.IDictionary{System.String,System.String},System.Boolean,System.Boolean)">
+            <summary>
+            填充数据
+            </summary>
+            <param name="req"></param>
+            <param name="data"></param>
+            <param name="isFromAttr"></param>
+            <param name="ignoreNullOrEmptyValue"></param>
+        </member>
+        <member name="M:XUtility.Client.ClientBase.ParseResponse``1(System.String)">
+            <summary>
+            解析响应信息
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="jsonRet"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XUtility.Client.ClientBase.GetParamStr(System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            获取参数字符串
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XUtility.Client.ClientErrorCode">
+            <summary>
+            Client错误码
+            </summary>
+        </member>
+        <member name="F:XUtility.Client.ClientErrorCode.JSON_PARSE_ERROR_CODE">
+            <summary>
+            JSON解析错误
+            </summary>
+        </member>
+        <member name="T:XUtility.Client.ClientException">
+            <summary>
+            Client异常
+            </summary>
+        </member>
+        <member name="M:XUtility.Client.ClientException.#ctor(System.Int32,System.String,System.Exception)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="code"></param>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="P:XUtility.Client.ClientException.Code">
+            <summary>
+            错误码
+            </summary>
+        </member>
+    </members>
+</doc>

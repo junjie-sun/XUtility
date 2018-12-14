@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>XUtility.Web</name>
+    </assembly>
+    <members>
+        <member name="T:XUtility.Web.Extensions.SessionExtensions">
+            <summary>
+            Session扩展类
+            </summary>
+        </member>
+        <member name="M:XUtility.Web.Extensions.SessionExtensions.Set``1(Microsoft.AspNetCore.Http.ISession,System.String,``0)">
+            <summary>
+            设置Session值
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="session"></param>
+            <param name="key"></param>
+            <param name="obj"></param>
+        </member>
+        <member name="M:XUtility.Web.Extensions.SessionExtensions.SetAsync``1(Microsoft.AspNetCore.Http.ISession,System.String,``0)">
+            <summary>
+            设置Session值
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="session"></param>
+            <param name="key"></param>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XUtility.Web.Extensions.SessionExtensions.Get``1(Microsoft.AspNetCore.Http.ISession,System.String)">
+            <summary>
+            获取Session值
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="session"></param>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XUtility.Web.Extensions.SessionExtensions.GetAsync``1(Microsoft.AspNetCore.Http.ISession,System.String)">
+            <summary>
+            获取Session值
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="session"></param>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XUtility.Web.Extensions.UrlHelperExtensions">
+            <summary>
+            UrlHelper扩展类
+            </summary>
+        </member>
+        <member name="M:XUtility.Web.Extensions.UrlHelperExtensions.AbsoluteAction(Microsoft.AspNetCore.Mvc.IUrlHelper,System.String,System.String,System.Object)">
+            <summary>
+            Generates a fully qualified URL to an action method by using the specified action name, controller name and
+            route values.
+            </summary>
+            <param name="url">The URL helper.</param>
+            <param name="actionName">The name of the action method.</param>
+            <param name="controllerName">The name of the controller.</param>
+            <param name="routeValues">The route values.</param>
+            <returns>The absolute URL.</returns>
+        </member>
+        <member name="M:XUtility.Web.Extensions.UrlHelperExtensions.AbsoluteContent(Microsoft.AspNetCore.Mvc.IUrlHelper,System.String)">
+            <summary>
+            Generates a fully qualified URL to the specified content by using the specified content path. Converts a
+            virtual (relative) path to an application absolute path.
+            </summary>
+            <param name="url">The URL helper.</param>
+            <param name="contentPath">The content path.</param>
+            <returns>The absolute URL.</returns>
+        </member>
+        <member name="M:XUtility.Web.Extensions.UrlHelperExtensions.AbsoluteRouteUrl(Microsoft.AspNetCore.Mvc.IUrlHelper,System.String,System.Object)">
+            <summary>
+            Generates a fully qualified URL to the specified route by using the route name and route values.
+            </summary>
+            <param name="url">The URL helper.</param>
+            <param name="routeName">Name of the route.</param>
+            <param name="routeValues">The route values.</param>
+            <returns>The absolute URL.</returns>
+        </member>
+    </members>
+</doc>

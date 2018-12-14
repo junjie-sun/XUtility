@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>XUtility.Json</name>
+    </assembly>
+    <members>
+        <member name="T:XUtility.Json.JsonExtensions">
+            <summary>
+            JSON扩展类
+            </summary>
+        </member>
+        <member name="M:XUtility.Json.JsonExtensions.FromJson``1(System.String)">
+            <summary>
+            JSON反序列化
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="json"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XUtility.Json.JsonExtensions.FromJson(System.String,System.Type)">
+            <summary>
+            JSON反序列化
+            </summary>
+            <param name="json"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XUtility.Json.JsonExtensions.ToJson(System.Object)">
+            <summary>
+            JSON序列化
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

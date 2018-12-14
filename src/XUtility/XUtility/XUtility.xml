@@ -1,0 +1,1202 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>XUtility</name>
+    </assembly>
+    <members>
+        <member name="T:XUtility.Http.HttpRequestUtils">
+            <summary>
+            Http请求工具类
+            </summary>
+        </member>
+        <member name="M:XUtility.Http.HttpRequestUtils.GetAsync(System.String,System.Collections.Generic.IDictionary{System.String,System.String},XUtility.Http.HttpGetOptions,System.Action{System.Net.Http.HttpClient})">
+            <summary>
+            Get请求
+            </summary>
+            <param name="url"></param>
+            <param name="paramList"></param>
+            <param name="options"></param>
+            <param name="clientSetting"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XUtility.Http.HttpRequestUtils.PostAsync(System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.String},XUtility.Http.HttpPostOptions,System.Action{System.Net.Http.HttpClient})">
+            <summary>
+            Post请求
+            </summary>
+            <param name="url"></param>
+            <param name="body"></param>
+            <param name="paramList"></param>
+            <param name="options"></param>
+            <param name="clientSetting"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XUtility.Http.HttpRequestUtils.PostFormAsync(System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.Collections.Generic.IDictionary{System.String,System.String},XUtility.Http.HttpPostOptions,System.Action{System.Net.Http.HttpClient})">
+            <summary>
+            PostForm请求
+            </summary>
+            <param name="url"></param>
+            <param name="form"></param>
+            <param name="paramList"></param>
+            <param name="options"></param>
+            <param name="clientSetting"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XUtility.Http.HttpRequestUtils.PostMultipartFormAsync(System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.Collections.Generic.IList{System.String},System.String,System.Collections.Generic.IDictionary{System.String,System.String},XUtility.Http.HttpPostOptions,System.Action{System.Net.Http.HttpClient})">
+            <summary>
+            PostMultipartForm请求
+            </summary>
+            <param name="url"></param>
+            <param name="form"></param>
+            <param name="filePaths"></param>
+            <param name="fileFormName"></param>
+            <param name="paramList"></param>
+            <param name="options"></param>
+            <param name="clientSetting"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XUtility.Http.HttpRequestUtils.PostFileAsync(System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.String},XUtility.Http.HttpPostOptions,System.Action{System.Net.Http.HttpClient})">
+            <summary>
+            以body为载体上传文件
+            </summary>
+            <param name="url"></param>
+            <param name="filePath"></param>
+            <param name="paramList"></param>
+            <param name="options"></param>
+            <param name="clientSetting"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XUtility.Http.HttpRequestUtils.DownloadAsync(System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.String,System.Action{System.Net.Http.HttpClient})">
+            <summary>
+            下载文件
+            </summary>
+            <param name="url"></param>
+            <param name="savePath"></param>
+            <param name="paramList"></param>
+            <param name="saveFileName"></param>
+            <param name="clientSetting"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XUtility.Http.HttpRequestUtils.AppendParams(System.String,System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            将参数添加到url的QueryString中
+            </summary>
+            <param name="url"></param>
+            <param name="paramList"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XUtility.Http.HttpGetOptions">
+            <summary>
+            HttpGet方法参数
+            </summary>
+        </member>
+        <member name="M:XUtility.Http.HttpGetOptions.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:XUtility.Http.HttpGetOptions.Accept">
+            <summary>
+            Accept
+            </summary>
+        </member>
+        <member name="P:XUtility.Http.HttpGetOptions.AcceptCharset">
+            <summary>
+            AcceptCharset
+            </summary>
+        </member>
+        <member name="P:XUtility.Http.HttpGetOptions.Encoding">
+            <summary>
+            Encoding
+            </summary>
+        </member>
+        <member name="T:XUtility.Http.HttpPostOptions">
+            <summary>
+            HttpPost方法参数
+            </summary>
+        </member>
+        <member name="M:XUtility.Http.HttpPostOptions.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:XUtility.Http.HttpPostOptions.Accept">
+            <summary>
+            Accept
+            </summary>
+        </member>
+        <member name="P:XUtility.Http.HttpPostOptions.AcceptCharset">
+            <summary>
+            AcceptCharset
+            </summary>
+        </member>
+        <member name="P:XUtility.Http.HttpPostOptions.Encoding">
+            <summary>
+            Encoding
+            </summary>
+        </member>
+        <member name="P:XUtility.Http.HttpPostOptions.ContentType">
+            <summary>
+            ContentType
+            </summary>
+        </member>
+        <member name="T:XUtility.Http.MimeMapping">
+            <summary>
+            Mime映射类
+            </summary>
+        </member>
+        <member name="M:XUtility.Http.MimeMapping.GetMimeMapping(System.String)">
+            <summary>
+            获取Mime映射
+            </summary>
+            <param name="FileName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XUtility.Notice.IPublisher">
+            <summary>
+            发布者接口
+            </summary>
+        </member>
+        <member name="P:XUtility.Notice.IPublisher.Name">
+            <summary>
+            发布者名称
+            </summary>
+        </member>
+        <member name="M:XUtility.Notice.IPublisher.Notice">
+            <summary>
+            通知
+            </summary>
+        </member>
+        <member name="T:XUtility.Notice.ISubscriber">
+            <summary>
+            订阅者
+            </summary>
+        </member>
+        <member name="P:XUtility.Notice.ISubscriber.Name">
+            <summary>
+            订阅者名称
+            </summary>
+        </member>
+        <member name="P:XUtility.Notice.ISubscriber.PublisherName">
+            <summary>
+            发布者名称
+            </summary>
+        </member>
+        <member name="P:XUtility.Notice.ISubscriber.Status">
+            <summary>
+            订阅者状态
+            </summary>
+        </member>
+        <member name="M:XUtility.Notice.ISubscriber.StartWaitNotice(System.Action,System.Action{XUtility.Notice.SubscribeCompletedInfo})">
+            <summary>
+            等待通知
+            </summary>
+            <param name="callback">收到通知后的回调</param>
+            <param name="completedCallback"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XUtility.Notice.ISubscriber.UnSubscriber">
+            <summary>
+            取消订阅
+            </summary>
+        </member>
+        <member name="T:XUtility.Notice.INoticeList`1">
+            <summary>
+            通知列表
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:XUtility.Notice.INoticeList`1.Add(`0)">
+            <summary>
+            添加通知
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:XUtility.Notice.INoticeList`1.Take">
+            <summary>
+            取出通知
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XUtility.Notice.INoticeList`1.Clear">
+            <summary>
+            清除所有通知
+            </summary>
+        </member>
+        <member name="P:XUtility.Notice.INoticeList`1.Count">
+            <summary>
+            通知数量
+            </summary>
+        </member>
+        <member name="T:XUtility.Notice.INoticeMode`1">
+            <summary>
+            通知模式接口
+            </summary>
+        </member>
+        <member name="M:XUtility.Notice.INoticeMode`1.Notice(`0,System.Collections.Generic.IList{XUtility.Notice.NoticeSubscriber{`0}})">
+            <summary>
+            向订阅者发起通知
+            </summary>
+            <param name="notice">需要进行处理的通知</param>
+            <param name="subscribers">需要进行通知的订阅者</param>
+        </member>
+        <member name="T:XUtility.Notice.NoticeManager`1">
+            <summary>
+            通知管理器
+            提供消息分发与订阅功能
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:XUtility.Notice.NoticeManager`1.Status">
+            <summary>
+            通知管理器状态
+            </summary>
+        </member>
+        <member name="P:XUtility.Notice.NoticeManager`1.NoticeList">
+            <summary>
+            未处理通知列表
+            </summary>
+        </member>
+        <member name="M:XUtility.Notice.NoticeManager`1.#ctor(XUtility.Notice.INoticeMode{`0},XUtility.Notice.INoticeList{`0})">
+            <summary>
+            构造函数
+            </summary>
+            <param name="noticeMode">通知处理模式，默认为ParallelNoticeMode</param>
+            <param name="noticeList">存放通知的列表，默认为NoticeQueue</param>
+        </member>
+        <member name="M:XUtility.Notice.NoticeManager`1.Publish(`0)">
+            <summary>
+            发布通知
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:XUtility.Notice.NoticeManager`1.StartSubscribeNotice">
+            <summary>
+            启动订阅通知
+            </summary>
+        </member>
+        <member name="M:XUtility.Notice.NoticeManager`1.StopSubscribeNotice">
+            <summary>
+            停止订阅通知
+            </summary>
+        </member>
+        <member name="M:XUtility.Notice.NoticeManager`1.ClearNoticeList">
+            <summary>
+            清除未处理通知列表
+            </summary>
+        </member>
+        <member name="M:XUtility.Notice.NoticeManager`1.AddSubscribe(System.String,System.Action{`0},System.Action{`0,System.Exception})">
+            <summary>
+            订阅通知
+            </summary>
+            <param name="name">订阅名称</param>
+            <param name="callback">通知回调</param>
+            <param name="exceptionCallback"></param>
+        </member>
+        <member name="M:XUtility.Notice.NoticeManager`1.RemoveSubscribe(System.String)">
+            <summary>
+            移除订阅通知
+            </summary>
+            <param name="name">订阅名称</param>
+        </member>
+        <member name="M:XUtility.Notice.NoticeManager`1.ClearSubscribe">
+            <summary>
+            移除所有订阅通知
+            </summary>
+        </member>
+        <member name="M:XUtility.Notice.NoticeManager`1.Dispose">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XUtility.Notice.NoticeManager`1.StartSubscribeNoticeTask">
+            <summary>
+            启动订阅通知任务
+            </summary>
+        </member>
+        <member name="T:XUtility.Notice.SubscribeNoticeStatus">
+            <summary>
+            订阅通知状态
+            </summary>
+        </member>
+        <member name="F:XUtility.Notice.SubscribeNoticeStatus.Stop">
+            <summary>
+            关闭
+            </summary>
+        </member>
+        <member name="F:XUtility.Notice.SubscribeNoticeStatus.Starting">
+            <summary>
+            正在启动
+            </summary>
+        </member>
+        <member name="F:XUtility.Notice.SubscribeNoticeStatus.Running">
+            <summary>
+            正在运行
+            </summary>
+        </member>
+        <member name="F:XUtility.Notice.SubscribeNoticeStatus.RequestStop">
+            <summary>
+            请求关闭
+            </summary>
+        </member>
+        <member name="T:XUtility.Notice.NoticeQueue`1">
+            <summary>
+            通知队列
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:XUtility.Notice.NoticeQueue`1.Add(`0)">
+            <summary>
+            入队
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:XUtility.Notice.NoticeQueue`1.Take">
+            <summary>
+            出队
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:XUtility.Notice.NoticeStack`1">
+            <summary>
+            通知栈
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:XUtility.Notice.NoticeStack`1.Add(`0)">
+            <summary>
+            入栈
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:XUtility.Notice.NoticeStack`1.Take">
+            <summary>
+            出栈
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:XUtility.Notice.NoticeSubscriber`1">
+            <summary>
+            订阅者
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:XUtility.Notice.NoticeSubscriber`1.Name">
+            <summary>
+            订阅者名称
+            </summary>
+        </member>
+        <member name="P:XUtility.Notice.NoticeSubscriber`1.Status">
+            <summary>
+            订阅者状态
+            </summary>
+        </member>
+        <member name="P:XUtility.Notice.NoticeSubscriber`1.Callback">
+            <summary>
+            通知回调
+            </summary>
+        </member>
+        <member name="P:XUtility.Notice.NoticeSubscriber`1.ExceptionCallback">
+            <summary>
+            调用通知回调时出现未处理异常时执行的回调
+            </summary>
+        </member>
+        <member name="P:XUtility.Notice.NoticeSubscriber`1.NoticeQueue">
+            <summary>
+            订阅者准备处理的通知队列
+            </summary>
+        </member>
+        <member name="M:XUtility.Notice.NoticeSubscriber`1.Normal">
+            <summary>
+            设置订阅者状态设置为准备就绪
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XUtility.Notice.NoticeSubscriber`1.Processing">
+            <summary>
+            将订阅者状态设置为处理通知中
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:XUtility.Notice.NoticeSubscriberStatus">
+            <summary>
+            订阅者状态
+            </summary>
+        </member>
+        <member name="F:XUtility.Notice.NoticeSubscriberStatus.Normal">
+            <summary>
+            准备就绪
+            </summary>
+        </member>
+        <member name="F:XUtility.Notice.NoticeSubscriberStatus.Processing">
+            <summary>
+            处理通知中
+            </summary>
+        </member>
+        <member name="T:XUtility.Notice.ParallelNoticeMode`1">
+            <summary>
+            并行通知模式
+            所有订阅对一个通知进行并行处理
+            对于每个订阅处理完一个通知后再处理下一个
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:XUtility.Notice.ParallelNoticeMode`1.Notice(`0,System.Collections.Generic.IList{XUtility.Notice.NoticeSubscriber{`0}})">
+            <summary>
+            向订阅者发起通知
+            </summary>
+            <param name="notice"></param>
+            <param name="subscribers"></param>
+        </member>
+        <member name="T:XUtility.Notice.SequenceNoticeMode`1">
+            <summary>
+            顺序通知模式
+            按订阅者添加顺序依次处理通知
+            一个通知所有订阅都处理完毕后再处理下一个通知
+            </summary>
+        </member>
+        <member name="M:XUtility.Notice.SequenceNoticeMode`1.Notice(`0,System.Collections.Generic.IList{XUtility.Notice.NoticeSubscriber{`0}})">
+            <summary>
+            向订阅者发起通知
+            </summary>
+            <param name="notice"></param>
+            <param name="subscribers"></param>
+        </member>
+        <member name="T:XUtility.Notice.Publisher">
+            <summary>
+            发布者
+            </summary>
+        </member>
+        <member name="P:XUtility.Notice.Publisher.Semaphore">
+            <summary>
+            发布通知用的信号量
+            </summary>
+        </member>
+        <member name="P:XUtility.Notice.Publisher.MaxConcurrent">
+            <summary>
+            信号量最大并发数
+            </summary>
+        </member>
+        <member name="P:XUtility.Notice.Publisher.Name">
+            <summary>
+            发布者名称
+            </summary>
+        </member>
+        <member name="M:XUtility.Notice.Publisher.#ctor(System.String,System.Int32)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="name">发布者名称</param>
+            <param name="maxConcurrent">最大并发数</param>
+        </member>
+        <member name="M:XUtility.Notice.Publisher.Notice">
+            <summary>
+            发布通知
+            </summary>
+        </member>
+        <member name="M:XUtility.Notice.Publisher.Dispose">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XUtility.Notice.Publisher.Init">
+            <summary>
+            初始化
+            </summary>
+        </member>
+        <member name="T:XUtility.Notice.ReliablePublisher">
+            <summary>
+            发布者，通知失败会尝试再次通知，直到所有通知都发布成功
+            </summary>
+        </member>
+        <member name="F:XUtility.Notice.ReliablePublisher.initTryNoticeAgainTime">
+            <summary>
+            当通知失败，再次尝试通知初始时间间隔
+            </summary>
+        </member>
+        <member name="F:XUtility.Notice.ReliablePublisher.currentTryNoticeAgainTime">
+            <summary>
+            当通知失败，再次尝试通知当前时间间隔
+            </summary>
+        </member>
+        <member name="F:XUtility.Notice.ReliablePublisher.tryNoticeAgainCount">
+            <summary>
+            需要重试通知的总数
+            </summary>
+        </member>
+        <member name="P:XUtility.Notice.ReliablePublisher.MaxTryNoticeAgainTime">
+            <summary>
+            当通知失败，再次尝试通知最大时间间隔
+            </summary>
+        </member>
+        <member name="M:XUtility.Notice.ReliablePublisher.#ctor(System.String,System.Int32,System.Int32)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="name">发布者名称</param>
+            <param name="maxConcurrent">最大并发数</param>
+            <param name="maxTryNoticeAgainTime">当通知失败，再次尝试通知最大时间间隔，单位：分钟</param>
+        </member>
+        <member name="M:XUtility.Notice.ReliablePublisher.#ctor(System.String,System.Int32,System.TimeSpan)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="name">发布者名称</param>
+            <param name="maxConcurrent">最大并发数</param>
+            <param name="maxTryNoticeAgainTime">当通知失败，再次尝试通知最大时间间隔</param>
+        </member>
+        <member name="M:XUtility.Notice.ReliablePublisher.Notice">
+            <summary>
+            通知
+            </summary>
+        </member>
+        <member name="M:XUtility.Notice.ReliablePublisher.Dispose">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XUtility.Notice.ReliablePublisher.AddNoticeAgain">
+            <summary>
+            再次通知
+            </summary>
+        </member>
+        <member name="T:XUtility.Notice.SubscribeCompletedInfo">
+            <summary>
+            订阅结束信息
+            </summary>
+        </member>
+        <member name="P:XUtility.Notice.SubscribeCompletedInfo.Subscriber">
+            <summary>
+            订阅者对象
+            </summary>
+        </member>
+        <member name="P:XUtility.Notice.SubscribeCompletedInfo.Exception">
+            <summary>
+            订阅结束时，如果有异常则Exception不为null
+            </summary>
+        </member>
+        <member name="M:XUtility.Notice.SubscribeCompletedInfo.#ctor(XUtility.Notice.Subscriber,System.Exception)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="subscriber">订阅者对象</param>
+            <param name="ex">订阅结束时发生的异常</param>
+        </member>
+        <member name="T:XUtility.Notice.Subscriber">
+            <summary>
+            订阅者
+            </summary>
+        </member>
+        <member name="P:XUtility.Notice.Subscriber.Semaphore">
+            <summary>
+            等待通知用的信号量
+            </summary>
+        </member>
+        <member name="P:XUtility.Notice.Subscriber.WaitTimeout">
+            <summary>
+            等待超时时间
+            </summary>
+        </member>
+        <member name="P:XUtility.Notice.Subscriber.CancellationTokenSource">
+            <summary>
+            用于取消订阅
+            </summary>
+        </member>
+        <member name="P:XUtility.Notice.Subscriber.Name">
+            <summary>
+            订阅者名称
+            </summary>
+        </member>
+        <member name="P:XUtility.Notice.Subscriber.PublisherName">
+            <summary>
+            发布者名称
+            </summary>
+        </member>
+        <member name="P:XUtility.Notice.Subscriber.Status">
+            <summary>
+            订阅者状态
+            </summary>
+        </member>
+        <member name="M:XUtility.Notice.Subscriber.#ctor(System.String,System.String,System.Int32)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="name">订阅者名称</param>
+            <param name="publisherName">发布者名称</param>
+            <param name="waitTimeout">等待超时时间，单位：分钟</param>
+        </member>
+        <member name="M:XUtility.Notice.Subscriber.#ctor(System.String,System.String,System.TimeSpan)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="name">订阅者名称</param>
+            <param name="publisherName">发布者名称</param>
+            <param name="waitTimeout">等待超时时间，单位：分钟</param>
+        </member>
+        <member name="M:XUtility.Notice.Subscriber.StartWaitNotice(System.Action,System.Action{XUtility.Notice.SubscribeCompletedInfo})">
+            <summary>
+            等待通知
+            </summary>
+            <param name="callback">收到通知后的回调</param>
+            <param name="completedCallback"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XUtility.Notice.Subscriber.UnSubscriber">
+            <summary>
+            取消订阅
+            </summary>
+        </member>
+        <member name="M:XUtility.Notice.Subscriber.Dispose">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XUtility.Notice.Subscriber.Init">
+            <summary>
+            初始化
+            </summary>
+        </member>
+        <member name="T:XUtility.Notice.SubscriberStatus">
+            <summary>
+            订阅者状态
+            </summary>
+        </member>
+        <member name="F:XUtility.Notice.SubscriberStatus.Init">
+            <summary>
+            初始化状态
+            </summary>
+        </member>
+        <member name="F:XUtility.Notice.SubscriberStatus.Ready">
+            <summary>
+            就绪状态
+            </summary>
+        </member>
+        <member name="F:XUtility.Notice.SubscriberStatus.Waitting">
+            <summary>
+            等待通知状态
+            </summary>
+        </member>
+        <member name="F:XUtility.Notice.SubscriberStatus.Processing">
+            <summary>
+            处理通知状态
+            </summary>
+        </member>
+        <member name="F:XUtility.Notice.SubscriberStatus.UnSubscribe">
+            <summary>
+            取消订阅状态
+            </summary>
+        </member>
+        <member name="F:XUtility.Notice.SubscriberStatus.Exit">
+            <summary>
+            正常退出状态
+            </summary>
+        </member>
+        <member name="F:XUtility.Notice.SubscriberStatus.Error">
+            <summary>
+            出错状态
+            </summary>
+        </member>
+        <member name="T:XUtility.Security.CryptographyUtils">
+            <summary>
+            加密工具类
+            </summary>
+        </member>
+        <member name="M:XUtility.Security.CryptographyUtils.MD5Encrypt(System.String)">
+            <summary>
+            MD5 加密
+            </summary>
+            <param name="original">The input.</param>
+            <returns></returns>
+        </member>
+        <member name="M:XUtility.Security.CryptographyUtils.GetFileMD5Hash(System.String)">
+            <summary>
+            获取指定文件的MD5哈希值
+            </summary>
+            <param name="filePath">文件路径</param>
+            <returns>输出Hash值</returns>
+        </member>
+        <member name="M:XUtility.Security.CryptographyUtils.SHA1Encrypt(System.String)">
+            <summary>
+            SHA1 加密
+            </summary>
+            <param name="original"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XUtility.Security.CryptographyUtils.GetFileSHA1Hash(System.String)">
+            <summary>
+            获取指定文件的SHA1哈希值
+            </summary>
+            <param name="filePath">文件路径</param>
+            <returns>输出Hash值</returns>
+        </member>
+        <member name="M:XUtility.Security.CryptographyUtils.SHA256Encrypt(System.String)">
+            <summary>
+            SHA256 加密
+            </summary>
+            <param name="original"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XUtility.Security.CryptographyUtils.SHA384Encrypt(System.String)">
+            <summary>
+            SHA384 加密
+            </summary>
+            <param name="original"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XUtility.Security.CryptographyUtils.SHA512Encrypt(System.String)">
+            <summary>
+            SHA512 加密
+            </summary>
+            <param name="original"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XUtility.Security.CryptographyUtils.AESEncrypt(System.String,System.String,System.Byte[])">
+            <summary>
+            AES 加密
+            </summary>
+            <param name="original"></param>
+            <param name="password"></param>
+            <param name="slat"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XUtility.Security.CryptographyUtils.AESDecrypt(System.String,System.String,System.Byte[])">
+            <summary>
+            AES 解密
+            </summary>
+            <param name="encryptText">To decrypt.</param>
+            <param name="password">The password.</param>
+            <param name="slat"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XUtility.Security.CryptographyUtils.RSAEncrypt(System.String,System.String)">
+            <summary>
+            RSA 加密
+            </summary>
+            <param name="original"></param>
+            <param name="publicKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XUtility.Security.CryptographyUtils.RSADecrypt(System.String,System.String)">
+            <summary>
+            RSA 解密
+            </summary>
+            <param name="encryptText"></param>
+            <param name="privateKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XUtility.Security.CryptographyUtils.PhoneMask(System.String)">
+            <summary>
+            对手机号码进行掩码处理
+            </summary>
+            <param name="phone"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XUtility.Security.CryptographyUtils.FullNameMask(System.String)">
+            <summary>
+            对姓名进行掩码处理
+            </summary>
+            <param name="fullName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XUtility.Security.SignatureUtils">
+            <summary>
+            签名工具类
+            </summary>
+        </member>
+        <member name="M:XUtility.Security.SignatureUtils.GetTimestamp">
+            <summary>
+            获取时间戳，1970-1-1至今的秒数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XUtility.Security.SignatureUtils.GenerateSignature(System.Collections.Generic.IDictionary{System.String,System.String},System.String,System.String,XUtility.Security.SignatureOptions)">
+            <summary>
+            生成签名
+            签名格式：paramKey1=paramValue分隔符paramKey2=paramValue分隔符paramKey3=paramValuePwd
+            paramKey以升序排列
+            </summary>
+            <param name="signatureParams"></param>
+            <param name="pwd"></param>
+            <param name="splitStr"></param>
+            <param name="options"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XUtility.Security.SignatureUtils.ValidateSignature(System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.String,System.String,XUtility.Security.SignatureValidateOptions,System.Func{System.String,System.Collections.Generic.IDictionary{System.String,System.String},XUtility.Security.SignatureOptions,System.String})">
+            <summary>
+            验证签名是否合法
+            </summary>
+            <param name="signature"></param>
+            <param name="signatureParams"></param>
+            <param name="pwd"></param>
+            <param name="splitStr"></param>
+            <param name="options"></param>
+            <param name="signatureHandler"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XUtility.Security.SignatureUtils.ComboString(System.Collections.Generic.IDictionary{System.String,System.String},System.String,System.String)">
+            <summary>
+            将signatureParams进行组合
+            </summary>
+            <param name="signatureParams"></param>
+            <param name="pwd"></param>
+            <param name="splitStr"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XUtility.Security.SignatureMethod">
+            <summary>
+            签名方法
+            </summary>
+        </member>
+        <member name="F:XUtility.Security.SignatureMethod.MD5">
+            <summary>
+            MD5
+            </summary>
+        </member>
+        <member name="F:XUtility.Security.SignatureMethod.SHA1">
+            <summary>
+            SHA1
+            </summary>
+        </member>
+        <member name="T:XUtility.Security.EncryptMode">
+            <summary>
+            加密模式
+            </summary>
+        </member>
+        <member name="F:XUtility.Security.EncryptMode.MD5">
+            <summary>
+            MD5
+            </summary>
+        </member>
+        <member name="F:XUtility.Security.EncryptMode.SHA1">
+            <summary>
+            SHA1
+            </summary>
+        </member>
+        <member name="F:XUtility.Security.EncryptMode.SHA256">
+            <summary>
+            SHA256
+            </summary>
+        </member>
+        <member name="F:XUtility.Security.EncryptMode.SHA384">
+            <summary>
+            SHA384
+            </summary>
+        </member>
+        <member name="F:XUtility.Security.EncryptMode.SHA512">
+            <summary>
+            SHA384
+            </summary>
+        </member>
+        <member name="T:XUtility.Security.SignatureOptions">
+            <summary>
+            签名Options
+            </summary>
+        </member>
+        <member name="P:XUtility.Security.SignatureOptions.Method">
+            <summary>
+            签名方法
+            </summary>
+        </member>
+        <member name="P:XUtility.Security.SignatureOptions.IsEncryptPwd">
+            <summary>
+            是否对Pwd进行加密
+            </summary>
+        </member>
+        <member name="P:XUtility.Security.SignatureOptions.PwdEncryptMode">
+            <summary>
+            isEncryptPwd=true时有效，Pwd的加密方式
+            </summary>
+        </member>
+        <member name="M:XUtility.Security.SignatureOptions.GetDefaultOptions">
+            <summary>
+            获取默认Options
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:XUtility.Security.SignatureValidateOptions">
+            <summary>
+            签名验证Options
+            </summary>
+        </member>
+        <member name="P:XUtility.Security.SignatureValidateOptions.IsCheckTimestamp">
+            <summary>
+            是否检查时间戳，单位：秒
+            </summary>
+        </member>
+        <member name="P:XUtility.Security.SignatureValidateOptions.TimestampParamName">
+            <summary>
+            当IsCheckTimestamp=true时有效，时间戳所在的参数名
+            </summary>
+        </member>
+        <member name="P:XUtility.Security.SignatureValidateOptions.TimestampError">
+            <summary>
+            当IsCheckTimestamp=true时有效，时间戳与服务器时间允许的最大误差值
+            </summary>
+        </member>
+        <member name="P:XUtility.Security.SignatureValidateOptions.SignatureOptions">
+            <summary>
+            签名选项
+            </summary>
+        </member>
+        <member name="M:XUtility.Security.SignatureValidateOptions.GetDefaultOptions">
+            <summary>
+            获取默认Options
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:XUtility.Threading.AsyncOneManyLock">
+            <summary>
+            提供reader-writer语义的异步锁
+            </summary>
+        </member>
+        <member name="M:XUtility.Threading.AsyncOneManyLock.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:XUtility.Threading.AsyncOneManyLock.WaitAsync(XUtility.Threading.OneManyMode)">
+            <summary>
+            等待
+            </summary>
+            <param name="mode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XUtility.Threading.AsyncOneManyLock.Release">
+            <summary>
+            释放
+            </summary>
+        </member>
+        <member name="T:XUtility.Threading.OneManyMode">
+            <summary>
+            锁模式
+            </summary>
+        </member>
+        <member name="F:XUtility.Threading.OneManyMode.Exclusive">
+            <summary>
+            独占模式
+            </summary>
+        </member>
+        <member name="F:XUtility.Threading.OneManyMode.Shared">
+            <summary>
+            共享模式
+            </summary>
+        </member>
+        <member name="T:XUtility.Threading.InterlockedEx">
+            <summary>Provides atomic operations for variables that are shared by multiple threads.</summary>
+        </member>
+        <member name="T:XUtility.Threading.InterlockedEx.Morpher`2">
+            <summary>Identifies a method that morphs the Int32 startValue into a new value, returning it.</summary>
+            <typeparam name="TResult">The return type returned by the Morph method.</typeparam>
+            <typeparam name="TArgument">The argument type passed to the Morph method.</typeparam>
+            <param name="startValue">The initial Int32 value.</param>
+            <param name="argument">The argument passed to the method.</param>
+            <param name="morphResult">The value returned from Morph when the morpher callback method is successful.</param>
+            <returns>The value that the morpher method desires to set the <paramref name="startValue"/> to.</returns>
+        </member>
+        <member name="M:XUtility.Threading.InterlockedEx.Morph``2(System.Int32@,``1,XUtility.Threading.InterlockedEx.Morpher{``0,``1})">
+            <summary>Atomically modifies an Int32 value using an algorithm identified by <paramref name="morpher"/>.</summary>
+            <typeparam name="TResult">The type of the return value.</typeparam>
+            <typeparam name="TArgument">The type of the argument passed to the <paramref name="morpher"/> callback method.</typeparam>
+            <param name="target">A reference to the Int32 value that is to be modified atomically.</param>
+            <param name="argument">A value of type <typeparamref name="TArgument"/> that will be passed on to the <paramref name="morpher"/> callback method.</param>
+            <param name="morpher">The algorithm that modifies the Int32 returning a new Int32 value and another return value to be returned to the caller.</param>
+            <returns>The desired Int32 value.</returns>
+        </member>
+        <member name="M:XUtility.Threading.InterlockedEx.IfThen(System.Int32@,System.Int32,System.Int32)">
+            <summary>Compares two values for equality and, if they are equal, replaces one of the values.</summary>
+            <return>Returns true if the value in <paramref name="value"/> was equal the the value of <paramref name="if"/>.</return>
+            <param name="value">The destination, whose value is compared with <paramref name="if"/> and possibly replaced with <paramref name="then"/>.</param>
+            <param name="if">The value that is compared to the value at <paramref name="value"/>.</param>
+            <param name="then">The value that might get placed into <paramref name="value"/>.</param>
+        </member>
+        <member name="M:XUtility.Threading.InterlockedEx.IfThen(System.Int32@,System.Int32,System.Int32,System.Int32@)">
+            <summary>Compares two values for equality and, if they are equal, replaces one of the values.</summary>
+            <remarks>The previous value in <paramref name="value"/> is returned in <paramref name="previousValue"/>.</remarks>
+            <return>Returns true if the value in <paramref name="value"/> was equal the the value of <paramref name="if"/>.</return>
+            <param name="value">The destination, whose value is compared with <paramref name="if"/> and possibly replaced with <paramref name="then"/>.</param>
+            <param name="if">The value that is compared to the value at <paramref name="value"/>.</param>
+            <param name="then">The value that might get placed into <paramref name="value"/>.</param>
+            <param name="previousValue">The previous value that was in <paramref name="value"/> prior to calling this method.</param>
+        </member>
+        <member name="M:XUtility.Threading.InterlockedEx.IfThen``1(``0@,``0,``0)">
+            <summary>Compares two values for equality and, if they are equal, replaces one of the values.</summary>
+            <return>Returns true if the value in <paramref name="value"/> was equal the the value of <paramref name="if"/>.</return>
+            <typeparam name="T">The type to be used for value, if, and then. This type must be a reference type.</typeparam>
+            <param name="value">The destination, whose value is compared with <paramref name="if"/> and possibly replaced with <paramref name="then"/>.</param>
+            <param name="if">The value that is compared to the value at <paramref name="value"/>.</param>
+            <param name="then">The value that might get placed into <paramref name="value"/>.</param>
+        </member>
+        <member name="M:XUtility.Threading.InterlockedEx.IfThen``1(``0@,``0,``0,``0@)">
+            <summary>Compares two values for equality and, if they are equal, replaces one of the values.</summary>
+            <remarks>The previous value in <paramref name="value"/> is returned in <paramref name="previousValue"/>.</remarks>
+            <return>Returns true if the value in <paramref name="value"/> was equal the the value of <paramref name="if"/>.</return>
+            <typeparam name="T">The type to be used for value, if, and then. This type must be a reference type.</typeparam>
+            <param name="value">The destination, whose value is compared with <paramref name="if"/> and possibly replaced with <paramref name="then"/>.</param>
+            <param name="if">The value that is compared to the value at <paramref name="value"/>.</param>
+            <param name="then">The value that might get placed into <paramref name="value"/>.</param>
+            <param name="previousValue">The previous value that was in <paramref name="value"/> prior to calling this method.</param>
+        </member>
+        <member name="M:XUtility.Threading.InterlockedEx.Max(System.Int32@,System.Int32)">
+            <summary>Increases a value to a new value if the new value is larger.</summary>
+            <return>Returns the previous value of <paramref name="target"/>.</return>
+            <param name="target">A variable containing the value that might be increased to a new maximum.</param>
+            <param name="value">The value that if larger than <paramref name="target"/> will be placed in <paramref name="target"/>.</param>
+        </member>
+        <member name="M:XUtility.Threading.InterlockedEx.Max(System.Int64@,System.Int64)">
+            <summary>Increases a value to a new value if the new value is larger.</summary>
+            <return>Returns the previous value of <paramref name="target"/>.</return>
+            <param name="target">A variable containing the value that might be increased to a new maximum.</param>
+            <param name="value">The value that if larger than <paramref name="target"/> will be placed in <paramref name="target"/>.</param>
+        </member>
+        <member name="M:XUtility.Threading.InterlockedEx.Min(System.Int32@,System.Int32)">
+            <summary>Decreases a value to a new value if the new value is smaller.</summary>
+            <return>Returns the previous value of <paramref name="target"/>.</return>
+            <param name="target">A variable containing the value that might be decreased to a new minimum.</param>
+            <param name="value">The value that if smaller than <paramref name="target"/> will be placed in <paramref name="target"/>.</param>
+        </member>
+        <member name="M:XUtility.Threading.InterlockedEx.Min(System.Int64@,System.Int64)">
+            <summary>Decreases a value to a new value if the new value is smaller.</summary>
+            <return>Returns the previous value of <paramref name="target"/>.</return>
+            <param name="target">A variable containing the value that might be decreased to a new minimum.</param>
+            <param name="value">The value that if smaller than <paramref name="target"/> will be placed in <paramref name="target"/>.</param>
+        </member>
+        <member name="M:XUtility.Threading.InterlockedEx.IncrementIfLessThan(System.Int32@,System.Int32)">
+            <summary>Increments a value by 1 if the value is less than the specified value (usually 0).</summary>
+            <return>Returns the previous value of <paramref name="target"/>.</return>
+            <param name="target">A variable containing the value that might be incremented.</param>
+            <param name="greatValue">The value that target must be less than in order for the increment to occur.</param>
+        </member>
+        <member name="M:XUtility.Threading.InterlockedEx.DecrementIfGreaterThan(System.Int32@,System.Int32)">
+            <summary>Decrements a value by 1 if the value is greater than the specified value (usually 0).</summary>
+            <return>Returns the previous value of <paramref name="target"/>.</return>
+            <param name="target">A variable containing the value that might be decremented.</param>
+            <param name="lowValue">The value that target must be greater than in order for the decrement to occur.</param>
+        </member>
+        <member name="M:XUtility.Threading.InterlockedEx.And(System.Int32@,System.Int32)">
+            <summary>Bitwise ANDs two 32-bit integers and replaces the first integer with the ANDed value, as an atomic operation.</summary>
+            <return>Returns the previous value of <paramref name="target"/>.</return>
+            <param name="target">A variable containing the first value to be ANDed. The bitwise AND of the two values is stored in <paramref name="target"/>.</param>
+            <param name="with">The value to AND with <paramref name="target"/>.</param>
+        </member>
+        <member name="M:XUtility.Threading.InterlockedEx.Or(System.Int32@,System.Int32)">
+            <summary>Bitwise ORs two 32-bit integers and replaces the first integer with the ORed value, as an atomic operation.</summary>
+            <return>Returns the previous value of <paramref name="target"/>.</return>
+            <param name="target">A variable containing the first value to be ORed. The bitwise OR of the two values is stored in <paramref name="target"/>.</param>
+            <param name="with">The value to OR with <paramref name="target"/>.</param>
+        </member>
+        <member name="M:XUtility.Threading.InterlockedEx.Or(System.Int64@,System.Int64)">
+            <summary>Bitwise ORs two 64-bit signed integers and replaces the first integer with the ORed value, as an atomic operation.</summary>
+            <return>Returns the previous value of <paramref name="target"/>.</return>
+            <param name="target">A variable containing the first value to be ORed. The bitwise OR of the two values is stored in <paramref name="target"/>.</param>
+            <param name="with">The value to OR with <paramref name="target"/>.</param>
+        </member>
+        <member name="M:XUtility.Threading.InterlockedEx.Xor(System.Int32@,System.Int32)">
+            <summary>Bitwise XORs two 32-bit integers and replaces the first integer with the XORed value, as an atomic operation.</summary>
+            <return>Returns the previous value of <paramref name="target"/>.</return>
+            <param name="target">A variable containing the first value to be XORed. The bitwise XOR of the two values is stored in <paramref name="target"/>.</param>
+            <param name="with">The value to XOR with <paramref name="target"/>.</param>
+        </member>
+        <member name="M:XUtility.Threading.InterlockedEx.BitTestAndSet(System.Int32@,System.Int32)">
+            <summary>Turns a bit on and returns whether or not it was on.</summary>
+            <return>Returns whether the bit was on prior to calling this method.</return>
+            <param name="target">A variable containing the value that is to have a bit turned on.</param>
+            <param name="bitNumber">The bit (0-31) in <paramref name="target"/> that should be turned on.</param>
+        </member>
+        <member name="M:XUtility.Threading.InterlockedEx.BitTestAndReset(System.Int32@,System.Int32)">
+            <summary>Turns a bit off and returns whether or not it was on.</summary>
+            <return>Returns whether the bit was on prior to calling this method.</return>
+            <param name="target">A variable containing the value that is to have a bit turned off.</param>
+            <param name="bitNumber">The bit (0-31) in <paramref name="target"/> that should be turned off.</param>
+        </member>
+        <member name="M:XUtility.Threading.InterlockedEx.BitTestAndCompliment(System.Int32@,System.Int32)">
+            <summary>Flips an on bit off or and off bit on.</summary>
+            <return>Returns whether the bit was on prior to calling this method.</return>
+            <param name="target">A variable containing the value that is to have a bit flipped.</param>
+            <param name="bitNumber">The bit (0-31) in <paramref name="target"/> that should be flipped.</param>
+        </member>
+        <member name="M:XUtility.Threading.InterlockedEx.MaskedAnd(System.Int32@,System.Int32,System.Int32)">
+            <summary>Bitwise ANDs two 32-bit integers with a mask replacing the first integer with the ANDed value, as an atomic operation.</summary>
+            <return>Returns the previous value of <paramref name="target"/>.</return>
+            <param name="target">A variable containing the first value to be ANDed. The bitwise AND of the two values is stored in <paramref name="target"/>.</param>
+            <param name="with">The value to AND with <paramref name="target"/>.</param>
+            <param name="mask">The value to AND with <paramref name="target"/> prior to ANDing with <paramref name="with"/>.</param>
+        </member>
+        <member name="M:XUtility.Threading.InterlockedEx.MaskedOr(System.Int32@,System.Int32,System.Int32)">
+            <summary>Bitwise ORs two 32-bit integers with a mask replacing the first integer with the ORed value, as an atomic operation.</summary>
+            <return>Returns the previous value of <paramref name="target"/>.</return>
+            <param name="target">A variable containing the first value to be ORed. The bitwise OR of the two values is stored in <paramref name="target"/>.</param>
+            <param name="with">The value to OR with <paramref name="target"/>.</param>
+            <param name="mask">The value to AND with <paramref name="target"/> prior to ORing with <paramref name="with"/>.</param>
+        </member>
+        <member name="M:XUtility.Threading.InterlockedEx.MaskedXor(System.Int32@,System.Int32,System.Int32)">
+            <summary>Bitwise XORs two 32-bit integers with a mask replacing the first integer with the XORed value, as an atomic operation.</summary>
+            <return>Returns the previous value of <paramref name="target"/>.</return>
+            <param name="target">A variable containing the first value to be XORed. The bitwise XOR of the two values is stored in <paramref name="target"/>.</param>
+            <param name="with">The value to XOR with <paramref name="target"/>.</param>
+            <param name="mask">The value to AND with <paramref name="target"/> prior to XORing with <paramref name="with"/>.</param>
+        </member>
+        <member name="M:XUtility.Threading.InterlockedEx.MaskedExchange(System.Int32@,System.Int32,System.Int32)">
+            <summary>Sets a variable to a specified value as an atomic operation.</summary>
+            <return>Returns the previous value of <paramref name="target"/>.</return>
+            <param name="target">A variable containing the value to be replaced.</param>
+            <param name="mask">The bits to leave unaffected in <paramref name="target"/> prior to ORing with <paramref name="value"/>.</param>
+            <param name="value">The value to replace <paramref name="target"/> with.</param>
+        </member>
+        <member name="M:XUtility.Threading.InterlockedEx.MaskedAdd(System.Int32@,System.Int32,System.Int32)">
+            <summary>Adds two integers and replaces the first integer with the sum, as an atomic operation.</summary>
+            <return>Returns the previous value of <paramref name="target"/>.</return>
+            <param name="target">A variable containing the value to be replaced.</param>
+            <param name="value">The value to add to <paramref name="target"/>.</param>
+            <param name="mask">The bits in <paramref name="target"/> that should not be affected by adding.</param>
+        </member>
+        <member name="T:XUtility.Threading.TaskExtentions">
+            <summary>
+            Task扩展类
+            </summary>
+        </member>
+        <member name="M:XUtility.Threading.TaskExtentions.WithCancellation(System.Threading.Tasks.Task,System.Threading.CancellationToken)">
+            <summary>
+            检测Task是否被取消，如果被取消则抛出OperationCanceledException，否则返回原始Task
+            </summary>
+            <param name="originalTask"></param>
+            <param name="ct"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XUtility.Threading.TaskExtentions.WithCancellation``1(System.Threading.Tasks.Task{``0},System.Threading.CancellationToken)">
+            <summary>
+            检测Task是否被取消，如果被取消则抛出OperationCanceledException，否则返回原始Task
+            </summary>
+            <typeparam name="TResult"></typeparam>
+            <param name="originalTask"></param>
+            <param name="ct"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XUtility.Xml.XmlExtensions">
+            <summary>
+            XML扩展类
+            </summary>
+        </member>
+        <member name="M:XUtility.Xml.XmlExtensions.FromXml``1(System.String)">
+            <summary>
+            XML反序列化
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="xml"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XUtility.Xml.XmlExtensions.FromXml(System.String,System.Type)">
+            <summary>
+            XML反序列化
+            </summary>
+            <param name="xml"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XUtility.Xml.XmlExtensions.ToXml(System.Object)">
+            <summary>
+            XML序列化
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
