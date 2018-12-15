@@ -8,11 +8,11 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DocumentationFile>E:\Codes\DotNet\XUtility\src\XUtility\XUtility.Client\XUtility.Client.xml</DocumentationFile>
+    <DocumentationFile>XUtility.Client.xml</DocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>E:\Codes\DotNet\XUtility\src\XUtility\XUtility.Client\XUtility.Client.xml</DocumentationFile>
+    <DocumentationFile>XUtility.Client.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
